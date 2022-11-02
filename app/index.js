@@ -4,7 +4,7 @@ const port = 3000;
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get("/", (req, res) => {
-  res.send("hello world from express, v3");
+  res.send("hello world from express main");
 });
 
 app.listen(port, () => {
