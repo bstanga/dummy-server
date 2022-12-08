@@ -5,7 +5,8 @@
   "author": "Bogdan Stanga <bogydaci@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "https": "^1.0.0"
   },
   "scripts": {
     "start": "node index.js"
