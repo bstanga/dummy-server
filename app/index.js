@@ -25,5 +25,5 @@ app.get("/log", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Dummy server listening on port ${port}`);
+  console.log(`Dummy render listening on port ${port}`);
 });
