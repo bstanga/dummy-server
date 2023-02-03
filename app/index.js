@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.json({
     time: new Date(),
     environemnt: "main3",
-    note: "testing automatic deployment",
+    note: "testing pr merging",
   });
 });
 
