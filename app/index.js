@@ -6,7 +6,7 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.json({
     time: new Date(),
-    environemnt: "main2",
+    environemnt: "main3",
     note: "testing automatic deployment",
   });
 });
