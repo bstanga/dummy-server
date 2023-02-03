@@ -1,14 +1,30 @@
+const { PrismaClient } = require("@prisma/client");
 const express = require("express");
 const app = express();
 const port = 3000;
 
+const prisma = new PrismaClient();
+
 // respond with "hello world" when a GET request is made to the homepage
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  const messages = await prisma.message.findMany();
+
   res.json({
     time: new Date(),
-    environemnt: "main3",
-    note: "testing pr merging",
+    messages,
   });
+});
+
+app.get("/message", async (req, res) => {
+  const { text } = req.query;
+
+  const message = await prisma.message.create({
+    data: {
+      text,
+    },
+  });
+
+  res.json({ success: true, newMessage: message });
 });
 
 app.get("/json", (req, res) => {
