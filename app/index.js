@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.json({
     time: new Date(),
     environemnt: "main2",
-    note: "deployment by malpe.io",
+    note: "testing automatic deployment",
   });
 });
 
