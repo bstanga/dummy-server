@@ -6,7 +6,7 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.json({
     time: new Date(),
-    environemnt: "main",
+    environemnt: "main2",
     note: "deployment by malpe.io",
   });
 });
