@@ -31,6 +31,10 @@ app.get("/crash", (req, res) => {
   res.json({ message: "crashing soon", date: new Date() });
 });
 
+app.get("/env", (req, res) => {
+  res.json({ env: process.env, testing: process.env.TESTING });
+});
+
 app.listen(port, () => {
   console.log(`Dummy server listening on port ${port}`);
 });
