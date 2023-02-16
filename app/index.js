@@ -24,6 +24,13 @@ app.get("/log", (req, res) => {
   res.json({ text, date: new Date() });
 });
 
+app.get("/crash", (req, res) => {
+  setTimeout(function () {
+    throw new Error("an error occurred, so node crashed");
+  }, 10);
+  res.json({ message: "crashing soon", date: new Date() });
+});
+
 app.listen(port, () => {
   console.log(`Dummy server listening on port ${port}`);
 });
