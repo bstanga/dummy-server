@@ -6,13 +6,9 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.json({
     time: new Date(),
-    environemnt: "main3",
-    note: "testing pr merging",
+    environemnt: "ycombinator",
+    version: "2",
   });
-});
-
-app.get("/json", (req, res) => {
-  res.json({ now: new Date() });
 });
 
 app.get("/log", (req, res) => {
@@ -22,6 +18,10 @@ app.get("/log", (req, res) => {
     console.log("new line:\n" + text);
   }
   res.json({ text, date: new Date() });
+});
+
+app.get("/json", (req, res) => {
+  res.json({ now: new Date() });
 });
 
 app.get("/crash", (req, res) => {
