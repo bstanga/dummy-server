@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.json({
     time: new Date(),
     environemnt: "ycombinator",
-    version: "2",
+    version: "100",
   });
 });
 
